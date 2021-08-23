@@ -22,3 +22,25 @@ function getMosFrequent(array) {
 }
 
 getMosFrequent(cats);
+
+// *********************************************
+
+const getMosFrequentRepeated = () => {
+  let mapping = {};
+  let maxrepeated = [];
+  let maxCount = 0;
+  for (let i = 0; i < cats.length; i++) {
+    mapping[cats[i].toLowerCase()] = ++mapping[cats[i].toLowerCase()] || 1;
+    if (mapping[cats[i].toLowerCase()] > maxCount) {
+      maxCount = mapping[cats[i].toLowerCase()];
+    }
+  }
+
+  for (const [key, value] of Object.entries(mapping)) {
+    key;
+    if (value === maxCount) {
+      maxrepeated.push(key);
+    }
+  }
+};
+getMosFrequent();
