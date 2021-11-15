@@ -21,10 +21,20 @@ function isPhrasePalindrome(text) {
 
 const isPalindrome = () => {
   var chars = text.replace(/[^a-zA-Z]/g, "").toLowerCase();
-  return (
-    chars
-      .split("")
-      .reverse()
-      .join("") === chars
-  );
+  return chars.split("").reverse().join("") === chars;
 };
+
+//////////////////////////**End**////////////////////////////////
+// Kauser's code
+
+let str = "nitin";
+
+function palindrome(str) {
+  let len = str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2;
+  for (let i = 0; i < len; i++) {
+    if (str[i] !== str[str.length - i - 1]) return false;
+  }
+  return true;
+}
+
+console.log(palindrome(str));

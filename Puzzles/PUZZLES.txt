@@ -1,0 +1,26 @@
+#1 Hourglass Puzzle
+
+            Time1 	          Timer2
+SandTimer : 4min              7min
+
+Current : 12:00
+Target: 12:09
+
+Solution:
+s1: 12:00 - 4,0, 7,0
+s2: 12:04 - 0,4, 3,4 
+s3: 12:07 - 1,3, 0,7
+s4: 12:08 - 0,4, 1,6
+s5: 12:09 - 0,4, 0,7
+
+#2 Calculating min number of attempts to find the minimum floor number from where an egg can break, using 2 eggs. Maximum number of floor is 100
+
+Solution: 14
+Min Summation of n >= 100
+Find n? 14
+
+How?
+Break 1st egg at 14, break 2nd at 1,2,3,4,5,6,7,8,9,10,11,12,13
+if it doesn't break, Break 1st egg at 14+13=27, break 2nd at 15,16,17,...
+if it doesn't break, Break 1st egg at 27+12=39, break 2nd at 28,29,30,...
+and so on..

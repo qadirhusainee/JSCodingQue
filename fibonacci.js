@@ -1,16 +1,16 @@
-const fionacci = n => {
+const fibonacci = (n) => {
   if (n < 2) {
     return n;
   } else {
-    return fionacci(n - 1) + fionacci(n - 2);
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
 };
 ////////////////////////////////////////////////////////
 
-var memoFibonacci = (function() {
+var memoFibonacci = (function () {
   var memo = {};
 
-  return n => {
+  return (n) => {
     var value;
     if (n in memo) {
       value = memo[n];
@@ -25,19 +25,37 @@ var memoFibonacci = (function() {
 })();
 
 ///////////////////////////////////////
-// Series 
-var fibonacci_series = function (n) 
-{
-  if (n===1) 
-  {
+// Series
+var fibonacci_series = function (n) {
+  if (n === 1) {
     return [0, 1];
-  } 
-  else 
-  {
+  } else {
     var s = fibonacci_series(n - 1);
     s.push(s[s.length - 1] + s[s.length - 2]);
     return s;
   }
 };
 
- console.log(fibonacci_series(8));
+console.log(fibonacci_series(8));
+
+// FIND THE ENTIRE SERIES AS AN ARRAY
+
+// Kauser's logic
+
+function fibonacci(n) {
+  const arr = [];
+  if (n > 1) {
+    arr.push(1);
+    arr.push(1);
+    for (let i = 2; i < n; i++) {
+      arr.push(arr[i - 1] + arr[i - 2]);
+    }
+  } else if (n === 1) {
+    arr.push(1);
+  } else {
+    return "fibonacci series does not exist for zero and negative numbers";
+  }
+  return arr;
+}
+
+console.log(fibonacci(3));
