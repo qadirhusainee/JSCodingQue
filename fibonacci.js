@@ -1,3 +1,5 @@
+// The Time Complexity of the recursive solution below is Exponential: O(2^n)
+// Hence, iterative approach: O(n) is better for this problem
 const fibonacci = (n) => {
   if (n < 2) {
     return n;

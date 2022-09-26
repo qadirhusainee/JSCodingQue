@@ -1,10 +1,10 @@
 // LinkedList
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
+  let length = 0;
+  let head = null;
 
-  var Node = function (element) {
+  let Node = function (element) {
     this.element = element;
     this.next = null;
   };
@@ -18,11 +18,11 @@ function LinkedList() {
   };
 
   this.add = function (element) {
-    var node = new Node(element);
+    let node = new Node(element);
     if (head === null) {
       head = node;
     } else {
-      var currentNode = head;
+      let currentNode = head;
 
       while (currentNode.next) {
         currentNode = currentNode.next;
@@ -35,8 +35,8 @@ function LinkedList() {
   };
 
   this.remove = function (element) {
-    var currentNode = head;
-    var previousNode;
+    let currentNode = head;
+    let previousNode;
     if (currentNode.element === element) {
       head = currentNode.next;
     } else {
@@ -56,8 +56,8 @@ function LinkedList() {
   };
 
   this.indexOf = function (element) {
-    var currentNode = head;
-    var index = -1;
+    let currentNode = head;
+    let index = -1;
 
     while (currentNode) {
       index++;
@@ -71,8 +71,8 @@ function LinkedList() {
   };
 
   this.elementAt = function (index) {
-    var currentNode = head;
-    var count = 0;
+    let currentNode = head;
+    let count = 0;
     while (count < index) {
       count++;
       currentNode = currentNode.next;
@@ -81,11 +81,11 @@ function LinkedList() {
   };
 
   this.addAt = function (index, element) {
-    var node = new Node(element);
+    let node = new Node(element);
 
-    var currentNode = head;
-    var previousNode;
-    var currentIndex = 0;
+    let currentNode = head;
+    let previousNode;
+    let currentIndex = 0;
 
     if (index > length) {
       return false;
@@ -107,9 +107,9 @@ function LinkedList() {
   };
 
   this.removeAt = function (index) {
-    var currentNode = head;
-    var previousNode;
-    var currentIndex = 0;
+    let currentNode = head;
+    let previousNode;
+    let currentIndex = 0;
     if (index < 0 || index >= length) {
       return null;
     }
@@ -128,7 +128,7 @@ function LinkedList() {
   };
 }
 
-var conga = new LinkedList();
+let conga = new LinkedList();
 conga.add("Kitten");
 conga.add("Puppy");
 conga.add("Dog");
