@@ -61,3 +61,20 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(3));
+
+
+// Tabulation / Itterative approach
+
+function fibonacci(n) {
+  const series = Array(n + 1).fill(0);
+  series[1] = 1;
+  for (let i = 0; i <= n; i++) {
+    series[i + 1] += series[i];
+    series[i + 2] += series[i];
+  }
+  return series[n];
+}
+
+// ** Complexity
+// Time - O(n)
+// space - O(n)
