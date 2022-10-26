@@ -9,7 +9,7 @@
  * @param {number[]} prices
  * @return {number}
  *
- * Solution: 2 pointer method to track smallest and greatest value od stocks
+ * Solution: 2 pointer method to track smallest and greatest value of stocks
  */
 var maxProfit = function (prices) {
   let maxProfit = 0;
