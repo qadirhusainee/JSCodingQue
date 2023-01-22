@@ -8,9 +8,9 @@
 // If value of input string is null return false
 // - Convert the string to array
 // - Iterate through the entire array
-// — Use isParanthesis() to see if current element is a parenthesis
+// — Use isParenthesis() to see if current element is a parenthesis
 // — — If it is, then use isOpenParenthesis() , if it returns true, push the open parenthesis character onto the stack
-// — — if isOpenParenthesis() returns false, check if top of stack. If it does not match the current element using the function matches(top, closedParanthesis) then we return false.
+// — — if isOpenParenthesis() returns false, check if top of stack. If it does not match the current element using the function matches(top, closedParenthesis) then we return false.
 // — — move onto next element
 // — At end of our function executing check the stack to see if it is empty, if it is we know we’re balanced and can return True! Otherwise False as we’re not balanced
 

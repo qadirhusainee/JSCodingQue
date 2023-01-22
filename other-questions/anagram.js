@@ -1,6 +1,6 @@
 // *************************** Approach 1 ********************************** //
 // The runtime complexity of a for loop is linear i.e O(n).
-// In this case, there are 3 consecutive forloops which are not nested.
+// In this case, there are 3 consecutive for-loops which are not nested.
 // Ignoring constants and other factors, the time complexity is approximately linear i.e. O(n).
 
 function anagrams(stringA, stringB) {
@@ -41,8 +41,7 @@ function getCharMap(string) {
 
 // *************************** Approach 2 ********************************** //
 
-
-// Array.sort uses merge sort so its time complexity is O(nlogn)
+// Array.sort uses merge sort so its time complexity is O(n*logn)
 
 function anagrams(stringA, stringB) {
   /*First, we remove any non-alphabet character using regex and convert       

@@ -9,7 +9,7 @@ Array.prototype.customReduce = function(f, result) {
   }
   return result;
 };
-////////Async reduce
+// Async reduce
 Array.prototype.asyncReduce = async function(f, result) {
   var i = 0;
   if (arguments.length < 2) {

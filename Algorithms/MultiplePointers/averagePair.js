@@ -12,12 +12,12 @@ var averagePair = function (numbers, average) {
   let left = 0;
   let right = numbers.length - 1;
   while (left < right) {
-    const currentAverge = (numbers[left]+numbers[right])/2
-    if(currentAverge === average) {
+    const currentAverage = (numbers[left]+numbers[right])/2
+    if(currentAverage === average) {
       return true;
-    } else if(currentAverge < average) {
+    } else if(currentAverage < average) {
       left ++
-    } else if(currentAverge > average) {
+    } else if(currentAverage > average) {
       right--
     }
   }
