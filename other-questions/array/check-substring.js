@@ -1,5 +1,3 @@
-// Kauser's code
-
 // CHECK IF THE SUBSTRING IS A PART OF THE ORIGINAL STRING (WITHOUT USING BUILT-IN METHODS)
 let str = "Support the development";
 let subStr = "development";
