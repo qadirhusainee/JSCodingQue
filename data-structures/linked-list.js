@@ -139,3 +139,33 @@ console.log(conga.removeAt(3));
 console.log(conga.elementAt(3));
 console.log(conga.indexOf("Puppy"));
 console.log(conga.size());
+
+// Approach 2
+
+class Node {
+  constructor(element) {
+    this.element = element;
+    this.next = null;
+  }
+}
+
+class SinglyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
+  push(val) {
+    const newNode = new Node(val, null)
+    if (!head) {
+      this.head = newNode;
+    }
+    if(!tail) {
+      this.tail = newNode
+    }
+  
+  }
+
+
+}
