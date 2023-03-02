@@ -27,20 +27,21 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
-  let dummyNode = new ListNode(-1, head);
-  let previousNode = dummyNode;
-  let removeNode = head
-  let tailNode = head
-  for(let i=0; i < n; i++) {
-      tailNode = tailNode.next
-  }
-  while(tailNode !== null) {
-      previousNode = previousNode.next;
-      removeNode = removeNode.next;
-      tailNode = tailNode.next;
-  }
-  previousNode.next = removeNode.next
-  return dummyNode.next
+    let dummyNode = new ListNode(-1, head);
+    let resultList = dummyNode;
+    let tempNode = head;
+    let length = 0
+    // count length of linked list
+    while(tempNode != null) {
+        tempNode = tempNode.next;
+        length++
+    }
+    // update pointer of linked list to the element before the target
+    for(let i =0; i < length-n; i++) {
+        dummyNode = dummyNode.next;
+    }
+    dummyNode.next = dummyNode.next.next;
+    return resultList.next
 };
 // @lc code=end
 
